@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayMessageActivity" android:label="C301as1"></activity>
+        <activity android:name=".SingleButtonActivity" android:label="C301as1"></activity>
     </application>
 
 </manifest>

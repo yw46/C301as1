@@ -12,7 +12,7 @@
         android:id="@+id/singleMode"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="104dp" />
+        android:layout_marginTop="91dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Statistics"
         android:id="@+id/statisticsMode"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="100dp"
         android:layout_below="@+id/buzzerMode"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

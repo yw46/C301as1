@@ -10,6 +10,16 @@
         android:text="New Text"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.23" />
+        android:layout_weight="0.39" />
+
+    <Button
+        android:layout_width="373dp"
+        android:layout_height="325dp"
+        android:text="React"
+        android:id="@+id/reactButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.56"
+        android:clickable="true"
+        android:onClick="click" />
 
 </LinearLayout>
