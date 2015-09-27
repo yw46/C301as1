@@ -5,20 +5,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 /**
  * Created by yishuo on 9/23/15.
@@ -31,9 +37,12 @@ public class SingleButtonActivity extends Activity {
     private int nclick;
     private int nloop;
     private String textstr;
+    private float [] tentime;
+    private float [] hundredtime;
 
     private long startTime;
     private long endTime;
+    private int timeSet;
     private float diff;
     public TextView text;
     private static final String fsingle = "fsingle.sav";
@@ -45,14 +54,38 @@ public class SingleButtonActivity extends Activity {
         setContentView(R.layout.activity_singlebuttonactivity);
         status = 0;
         nclick = 0;
+        timeSet = 0;
         text = (TextView) findViewById(R.id.textView);
         //Button reactButton = (Button) findViewById(R.id.reactButton);
         text.setText("Press \"React\" to start");
         //reactButton.setOnClickListener((View.OnClickListener) this);
     }
 
-
+    /*
     public void record() {
+        try {
+            FileInputStream fis = openFileInput(fsingle);
+            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+
+
+        } catch (FileNotFoundException e) {
+
+        }
+        //
+        try {
+            FileOutputStream fos = openFileOutput(fsingle, 0);
+            Gson gson = new Gson();
+            OutputStreamWriter writer = new OutputStreamWriter(fos);
+            for (int i = 0; i < 100; i = i + 1) {
+                hundredtime[i] = 0;
+            }
+            gson.toJson(hundredtime, writer);
+            writer.flush();
+            fos.close();
+        }
+    }
+    */
+        /*
         try {
             FileInputStream fis = openFileInput(fsingle);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
@@ -70,7 +103,7 @@ public class SingleButtonActivity extends Activity {
                 throw new RuntimeException(ex);
             }
         }
-    }
+        */
     // http://stackoverflow.com/questions/28243847/how-to-make-a-timer-in-android-studio-1-0-2
     // By: vinitius
     public void click(View view) {
@@ -86,8 +119,9 @@ public class SingleButtonActivity extends Activity {
                 diff = diff - n;
                 diff = (float) (diff / 1000.0);
                 textstr = "Latency: " + Float.toString(diff) + "s";
-                //record();
+                //record(); // TO DO
             }
+            textstr = textstr + "\nStart " + Integer.toString((int)startTime) + " end " + Integer.toString((int)endTime) + " diff " + Float.toString(diff);
             //textstr = textstr + " Press \"React\" to start a new game status" + Integer.toString(status);
             textstr = textstr + "\nPress \"React\" to start a new game\nn " + Integer.toString(n);
             text.setText(textstr);
@@ -100,6 +134,8 @@ public class SingleButtonActivity extends Activity {
             rand = new Random();
             n = rand.nextInt(1991) + 10;
             startTime = System.currentTimeMillis();
+            textstr = textstr + Integer.toString((int) startTime);
+            text.setText(textstr);
             timer.schedule(new TimerTask() {
                 @Override
                 public void run() {
@@ -117,7 +153,7 @@ public class SingleButtonActivity extends Activity {
                         }
                     });
                 }
-            }, 0, 1000);
+            }, 0, 10);
         }
 
     }

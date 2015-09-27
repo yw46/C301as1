@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".DisplayMessageActivity" android:label="C301as1"></activity>
         <activity android:name=".SingleButtonActivity" android:label="C301as1"></activity>
+        <activity android:name=".BuzzerNumPlayer" android:label="C301as1"></activity>
+        <activity android:name=".TwoPlayerBuzzerActivity" android:label="C301as1"></activity>
+        <activity android:name=".ThreePlayerBuzzerActivity" android:label="C301as1"></activity>
+        <activity android:name=".FourPlayerBuzzerActivity" android:label="C301as1"></activity>
     </application>
 
 </manifest>

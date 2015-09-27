@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
 
         buzzerMode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BuzzerButtonActivity.class);
+                Intent intent = new Intent(MainActivity.this, BuzzerNumPlayer.class);
                 startActivity(intent);
             }
         });
