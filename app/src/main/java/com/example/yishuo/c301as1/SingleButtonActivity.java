@@ -109,11 +109,7 @@ public class SingleButtonActivity extends Activity {
     public void click(View view) {
         if (status == 1) {
             timer.cancel();
-<<<<<<< HEAD
-            timer.purge();
             status = 0;
-=======
->>>>>>> 320ccc5196882b0ca8a2a9d45b345f4949808732
             endTime = System.currentTimeMillis();
             diff = (float)(endTime - startTime);
             //textstr = "Stop " + Float.toString(diff) + " n " + Integer.toString(n);
@@ -130,11 +126,7 @@ public class SingleButtonActivity extends Activity {
             //textstr = textstr + " Press \"React\" to start a new game status" + Integer.toString(status);
             textstr = textstr + "\nPress \"React\" to start a new game\nn " + Integer.toString(n);
             text.setText(textstr);
-<<<<<<< HEAD
 
-=======
-            status = 0;
->>>>>>> 320ccc5196882b0ca8a2a9d45b345f4949808732
         } else {
             textstr = "Game start";
             text.setText(textstr);
@@ -155,7 +147,6 @@ public class SingleButtonActivity extends Activity {
                             diff = (float)(endTime - startTime);
                             //textstr = "status" + Integer.toString(status);
                             if (diff >= (float) n) {
-<<<<<<< HEAD
                                 cancel();
                                 status = 1;
                                 textstr = "click";
@@ -166,16 +157,6 @@ public class SingleButtonActivity extends Activity {
                     });
                 }
             }, 0, 5);
-=======
-                                status = 1;
-                                textstr = "click";
-                            }
-                            text.setText(textstr);
-                        }
-                    });
-                }
-            }, 0, 10);
->>>>>>> 320ccc5196882b0ca8a2a9d45b345f4949808732
         }
 
     }

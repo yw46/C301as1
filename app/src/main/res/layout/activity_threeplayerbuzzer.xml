@@ -23,11 +23,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="145dp"
-<<<<<<< HEAD
+
         android:text="Player 2"
-=======
-        android:text="Plaer 2"
->>>>>>> 320ccc5196882b0ca8a2a9d45b345f4949808732
+
         android:id="@+id/threePlayer2"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.12" />
