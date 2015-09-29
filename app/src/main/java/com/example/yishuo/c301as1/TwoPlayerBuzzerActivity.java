@@ -34,10 +34,17 @@ public class TwoPlayerBuzzerActivity extends Activity {
                 if (status == 1){
                     p1num = p1num + 1;
                     p2num = p2num; // then save into file
+<<<<<<< HEAD
                     textstr = "Player 1 Pressed First\nPress \"Player 1\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num);
                     text.setText(textstr);
                     status = 0;
                     plr = 1;
+=======
+                    textstr = "Player 1 Pressed First\nPress any button to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num);
+                    text.setText(textstr);
+                    status = 0;
+                    plr = 0;
+>>>>>>> 320ccc5196882b0ca8a2a9d45b345f4949808732
                 } else if ((status == 0) && (plr == 1)){
                     status = 1;
                     textstr = "Click";
@@ -56,10 +63,17 @@ public class TwoPlayerBuzzerActivity extends Activity {
                 if (status == 1){
                     p1num = p1num;
                     p2num = p2num + 1; // then save into file
+<<<<<<< HEAD
                     textstr = "Player 2 Pressed First\nPress \"Player 2\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num);
                     text.setText(textstr);
                     status = 0;
                     plr = 2;
+=======
+                    textstr = "Player 2 Pressed First\nPress any button to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num);
+                    text.setText(textstr);
+                    status = 0;
+                    plr = 0;
+>>>>>>> 320ccc5196882b0ca8a2a9d45b345f4949808732
                 } else if ((status == 0) && (plr == 2)) {
                     status = 1;
                     textstr = "Click";
