@@ -17,6 +17,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Random;
@@ -31,21 +32,20 @@ import com.google.gson.reflect.TypeToken;
  */
 public class SingleButtonActivity extends Activity {
     private int status; // 0 = press button to start
-                        // 1 = started, press button to stop
+                          // 1 = started, press button to stop
     private Random rand;
     private int n;
     private int nclick;
     private int nloop;
     private String textstr;
-    private float [] tentime;
-    private float [] hundredtime;
+    private ArrayList<Float> singletime;
 
     private long startTime;
     private long endTime;
     private int timeSet;
     private float diff;
     public TextView text;
-    private static final String fsingle = "fsingle.sav";
+    private static final String FSINGLE = "fsingle.sav";
     Timer timer;
 
 
@@ -59,56 +59,58 @@ public class SingleButtonActivity extends Activity {
         //Button reactButton = (Button) findViewById(R.id.reactButton);
         text.setText("Press \"React\" to start");
         //reactButton.setOnClickListener((View.OnClickListener) this);
+        singletime = new ArrayList<Float>();
+        loadFile();
     }
 
-    /*
-    public void record() {
+    private void loadFile() {
         try {
-            FileInputStream fis = openFileInput(fsingle);
+            FileInputStream fis = openFileInput(FSINGLE);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-
-
-        } catch (FileNotFoundException e) {
-
-        }
-        //
-        try {
-            FileOutputStream fos = openFileOutput(fsingle, 0);
             Gson gson = new Gson();
+            Type listType = new TypeToken<ArrayList<Float>>() {}.getType();
+            singletime = gson.fromJson(in, listType);
+        } catch (FileNotFoundException e) {
+            singletime = new ArrayList<Float>();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void saveFile() {
+        try {
+            FileOutputStream fos = openFileOutput(FSINGLE, 0);
             OutputStreamWriter writer = new OutputStreamWriter(fos);
-            for (int i = 0; i < 100; i = i + 1) {
-                hundredtime[i] = 0;
-            }
-            gson.toJson(hundredtime, writer);
+            Gson gson = new Gson();
+            gson.toJson(singletime, writer);
             writer.flush();
             fos.close();
-        }
-    }
-    */
-        /*
-        try {
-            FileInputStream fis = openFileInput(fsingle);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            byte[] bytes = new byte[100];
-            try {
-                fis.read(bytes);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
-            File f = new File(fsingle);
-            try {
-                f.createNewFile();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
+            throw new RuntimeException(e);
         }
-        */
+        textstr = textstr + "\nFile Saved";
+        text.setText(textstr);
+    }
+
+    public void record() {
+        if (singletime.size() == 0) {
+            singletime.add(diff);
+        } else {
+            singletime.add(0, diff); // appends diff to the begining of the array list
+        }
+        saveFile();
+        textstr = textstr + "\nsize " + Integer.toString((int) singletime.size());
+        text.setText(textstr);
+    }
+
     // http://stackoverflow.com/questions/28243847/how-to-make-a-timer-in-android-studio-1-0-2
     // By: vinitius
     public void click(View view) {
         if (status == 1) {
             timer.cancel();
+            //timer.purge();
             status = 0;
             endTime = System.currentTimeMillis();
             diff = (float)(endTime - startTime);
@@ -120,7 +122,7 @@ public class SingleButtonActivity extends Activity {
                 diff = diff - n;
                 diff = (float) (diff / 1000.0);
                 textstr = "Latency: " + Float.toString(diff) + "s";
-                //record(); // TO DO
+                record(); // TO DO
             }
             textstr = textstr + "\nStart " + Integer.toString((int)startTime) + " end " + Integer.toString((int)endTime) + " diff " + Float.toString(diff);
             //textstr = textstr + " Press \"React\" to start a new game status" + Integer.toString(status);
@@ -134,6 +136,7 @@ public class SingleButtonActivity extends Activity {
             timer = new Timer();
             rand = new Random();
             n = rand.nextInt(1991) + 10;
+            n = 10;
             startTime = System.currentTimeMillis();
             textstr = textstr + Integer.toString((int) startTime);
             text.setText(textstr);
@@ -163,8 +166,6 @@ public class SingleButtonActivity extends Activity {
 
     private void TimerMethod() {
         this.runOnUiThread(Timer_Tick);
-        //textstr = "timer";
-        //text.setText(textstr);
     }
 
     private Runnable Timer_Tick = new Runnable() {
