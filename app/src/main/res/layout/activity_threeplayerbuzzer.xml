@@ -23,9 +23,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="145dp"
-
         android:text="Player 2"
-
         android:id="@+id/threePlayer2"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.12" />

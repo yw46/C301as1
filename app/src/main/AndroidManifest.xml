@@ -22,6 +22,7 @@
         <activity android:name=".TwoPlayerBuzzerActivity" android:label="C301as1"></activity>
         <activity android:name=".ThreePlayerBuzzerActivity" android:label="C301as1"></activity>
         <activity android:name=".FourPlayerBuzzerActivity" android:label="C301as1"></activity>
+        <activity android:name=".StatisticsButton" android:label="C301as1"></activity>
     </application>
 
 </manifest>

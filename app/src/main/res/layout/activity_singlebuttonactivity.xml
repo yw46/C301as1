@@ -5,20 +5,20 @@
     android:weightSum="1">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="345dp"
+        android:layout_height="100dp"
         android:text="New Text"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.39" />
+        android:layout_weight="0.10" />
 
     <Button
-        android:layout_width="373dp"
-        android:layout_height="325dp"
+        android:layout_width="345dp"
+        android:layout_height="425dp"
         android:text="React"
         android:id="@+id/reactButton"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.56"
+        android:layout_weight="0.1"
         android:clickable="true"
         android:onClick="click" />
 
