@@ -50,7 +50,7 @@ public class TwoPlayerBuzzerActivity extends Activity {
                 if (status == 1){
                     p1num = p1num + 1;
                     p2num = p2num; // then save into file
-                    textstr = "Player 1 Pressed First\nPress \"Player 1\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num);
+                    textstr = "Player 1 Pressed First\nPress \"Player 1\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num);
                     text.setText(textstr);
                     status = 0;
                     plr = 1;
@@ -73,7 +73,7 @@ public class TwoPlayerBuzzerActivity extends Activity {
                 if (status == 1){
                     p1num = p1num;
                     p2num = p2num + 1; // then save into file
-                    textstr = "Player 2 Pressed First\nPress \"Player 2\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num);
+                    textstr = "Player 2 Pressed First\nPress \"Player 2\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num);
                     text.setText(textstr);
                     status = 0;
                     plr = 2;
@@ -102,8 +102,8 @@ public class TwoPlayerBuzzerActivity extends Activity {
         twoPlayersTime.add(p1num);
         twoPlayersTime.add(p2num);
         saveFile();
-        textstr = textstr + "\np1 " + Integer.toString(twoPlayersTime.get(0)) + " p2 " + Integer.toString(twoPlayersTime.get(1));
-        text.setText(textstr);
+        //textstr = textstr + "\np1 " + Integer.toString(twoPlayersTime.get(0)) + " p2 " + Integer.toString(twoPlayersTime.get(1));
+        //text.setText(textstr);
         p1num = 0;
         p2num = 0;
     }
@@ -119,8 +119,6 @@ public class TwoPlayerBuzzerActivity extends Activity {
             twoPlayersTime = new ArrayList<Integer>();
             twoPlayersTime.add(p1num);
             twoPlayersTime.add(p2num);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -137,7 +135,7 @@ public class TwoPlayerBuzzerActivity extends Activity {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        textstr = textstr + "\nFile Saved";
-        text.setText(textstr);
+        //textstr = textstr + "\nFile Saved";
+        //text.setText(textstr);
     }
 }

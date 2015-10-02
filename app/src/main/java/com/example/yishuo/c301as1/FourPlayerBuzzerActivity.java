@@ -59,7 +59,7 @@ public class FourPlayerBuzzerActivity extends Activity{
                     p2num = p2num;
                     p3num = p3num;
                     p4num = p4num; // then save into file
-                    textstr = "Player 1 Pressed First\nPress \"Player 1\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num) + " p4 " + Integer.toString(p4num);
+                    textstr = "Player 1 Pressed First\nPress \"Player 1\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num) + " p4 " + Integer.toString(p4num);
                     text.setText(textstr);
                     status = 0;
                     plr = 1;
@@ -85,7 +85,7 @@ public class FourPlayerBuzzerActivity extends Activity{
                     p2num = p2num + 1;
                     p3num = p3num;
                     p4num = p4num; // then save into file
-                    textstr = "Player 2 Pressed First\nPress \"Player 2\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num) + " p4 " + Integer.toString(p4num);
+                    textstr = "Player 2 Pressed First\nPress \"Player 2\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num) + " p4 " + Integer.toString(p4num);
                     text.setText(textstr);
                     status = 0;
                     plr = 2;
@@ -111,7 +111,7 @@ public class FourPlayerBuzzerActivity extends Activity{
                     p2num = p2num;
                     p3num = p3num + 1;
                     p4num = p4num; // then save into file
-                    textstr = "Player 3 Pressed First\nPress \"Player 3\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num) + " p4 " + Integer.toString(p4num);
+                    textstr = "Player 3 Pressed First\nPress \"Player 3\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num) + " p4 " + Integer.toString(p4num);
                     text.setText(textstr);
                     status = 0;
                     plr = 3;
@@ -137,7 +137,7 @@ public class FourPlayerBuzzerActivity extends Activity{
                     p2num = p2num;
                     p3num = p3num;
                     p4num = p4num + 1; // then save into file
-                    textstr = "Player 4 Pressed First\nPress \"Player 4\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num) + " p4 " + Integer.toString(p4num);
+                    textstr = "Player 4 Pressed First\nPress \"Player 4\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num) + " p4 " + Integer.toString(p4num);
                     text.setText(textstr);
                     status = 0;
                     plr = 4;
@@ -158,7 +158,7 @@ public class FourPlayerBuzzerActivity extends Activity{
     }
 
     private void record() {
-        textstr = textstr + "\nARRAYLIST SIZE " + Integer.toString(fourPlayersTime.size());
+        //textstr = textstr + "\nARRAYLIST SIZE " + Integer.toString(fourPlayersTime.size());
         text.setText(textstr);
 
         int temp0 = fourPlayersTime.get(0);
@@ -177,8 +177,8 @@ public class FourPlayerBuzzerActivity extends Activity{
         fourPlayersTime.add(p4num);
         saveFile();
 
-        textstr = textstr + "\np1 " + Integer.toString(fourPlayersTime.get(0)) + " p2 " + Integer.toString(fourPlayersTime.get(1)) + " p3 "  + Integer.toString(fourPlayersTime.get(2)) + " p4 " + Integer.toString(fourPlayersTime.get(3));
-        text.setText(textstr);
+        //textstr = textstr + "\np1 " + Integer.toString(fourPlayersTime.get(0)) + " p2 " + Integer.toString(fourPlayersTime.get(1)) + " p3 "  + Integer.toString(fourPlayersTime.get(2)) + " p4 " + Integer.toString(fourPlayersTime.get(3));
+        //text.setText(textstr);
         p1num = 0;
         p2num = 0;
         p3num = 0;
@@ -198,8 +198,6 @@ public class FourPlayerBuzzerActivity extends Activity{
             fourPlayersTime.add(p2num);
             fourPlayersTime.add(p3num);
             fourPlayersTime.add(p4num);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -216,7 +214,7 @@ public class FourPlayerBuzzerActivity extends Activity{
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        textstr = textstr + "\nFile Saved";
-        text.setText(textstr);
+        //textstr = textstr + "\nFile Saved";
+        //text.setText(textstr);
     }
 }

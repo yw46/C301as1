@@ -72,8 +72,6 @@ public class SingleButtonActivity extends Activity {
             singletime = gson.fromJson(in, listType);
         } catch (FileNotFoundException e) {
             singletime = new ArrayList<Float>();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -90,7 +88,6 @@ public class SingleButtonActivity extends Activity {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        textstr = textstr + "\nFile Saved";
         text.setText(textstr);
     }
 
@@ -101,7 +98,6 @@ public class SingleButtonActivity extends Activity {
             singletime.add(0, diff); // appends diff to the begining of the array list
         }
         saveFile();
-        textstr = textstr + "\nsize " + Integer.toString((int) singletime.size());
         text.setText(textstr);
     }
 
@@ -117,16 +113,15 @@ public class SingleButtonActivity extends Activity {
             //textstr = "Stop " + Float.toString(diff) + " n " + Integer.toString(n);
             if (diff < (float)n) {
                 //textstr = textstr + " You pressed too fast";
-                textstr = "You pressed too fast";
+                textstr = "You pressed too early";
             } else {
                 diff = diff - n;
                 diff = (float) (diff / 1000.0);
                 textstr = "Latency: " + Float.toString(diff) + "s";
                 record(); // TO DO
             }
-            textstr = textstr + "\nStart " + Integer.toString((int)startTime) + " end " + Integer.toString((int)endTime) + " diff " + Float.toString(diff);
             //textstr = textstr + " Press \"React\" to start a new game status" + Integer.toString(status);
-            textstr = textstr + "\nPress \"React\" to start a new game\nn " + Integer.toString(n);
+            textstr = textstr + "\nPress \"React\" to start a new game";
             text.setText(textstr);
 
         } else {
@@ -136,9 +131,7 @@ public class SingleButtonActivity extends Activity {
             timer = new Timer();
             rand = new Random();
             n = rand.nextInt(1991) + 10;
-            n = 10;
             startTime = System.currentTimeMillis();
-            textstr = textstr + Integer.toString((int) startTime);
             text.setText(textstr);
             timer.schedule(new TimerTask() {
                 @Override

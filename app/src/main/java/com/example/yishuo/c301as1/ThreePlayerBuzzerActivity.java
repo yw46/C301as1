@@ -55,7 +55,7 @@ public class ThreePlayerBuzzerActivity extends Activity {
                     p1num = p1num + 1;
                     p2num = p2num;
                     p3num = p3num; // then save into file
-                    textstr = "Player 1 Pressed First\nPress \"Player 1\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num);
+                    textstr = "Player 1 Pressed First\nPress \"Player 1\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num);
                     text.setText(textstr);
                     status = 0;
                     plr = 1;
@@ -80,7 +80,7 @@ public class ThreePlayerBuzzerActivity extends Activity {
                     p1num = p1num;
                     p2num = p2num + 1;
                     p3num = p3num; // then save into file
-                    textstr = "Player 2 Pressed First\nPress \"Player 2\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num);
+                    textstr = "Player 2 Pressed First\nPress \"Player 2\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num);
                     text.setText(textstr);
                     status = 0;
                     plr = 2;
@@ -105,7 +105,7 @@ public class ThreePlayerBuzzerActivity extends Activity {
                     p1num = p1num;
                     p2num = p2num;
                     p3num = p3num + 1; // then save into file
-                    textstr = "Player 3 Pressed First\nPress \"Player 3\" to start a new game" + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num);
+                    textstr = "Player 3 Pressed First\nPress \"Player 3\" to start a new game";// + "\np1 " + Integer.toString(p1num) + " p2 " + Integer.toString(p2num) + " p3 " + Integer.toString(p3num);
                     text.setText(textstr);
                     status = 0;
                     plr = 3;
@@ -126,7 +126,7 @@ public class ThreePlayerBuzzerActivity extends Activity {
     }
 
     private void record() {
-        textstr = textstr + "\nARRAYLIST SIZE " + Integer.toString(threePlayersTime.size());
+        //textstr = textstr + "\nARRAYLIST SIZE " + Integer.toString(threePlayersTime.size());
         int temp0 = threePlayersTime.get(0);
         int temp1 = threePlayersTime.get(1);
         int temp2 = threePlayersTime.get(2);
@@ -138,8 +138,8 @@ public class ThreePlayerBuzzerActivity extends Activity {
         threePlayersTime.add(p2num);
         threePlayersTime.add(p3num);
         saveFile();
-        textstr = textstr + "\np1 " + Integer.toString(threePlayersTime.get(0)) + " p2 " + Integer.toString(threePlayersTime.get(1)) + " p3 "  + Integer.toString(threePlayersTime.get(2));
-        text.setText(textstr);
+        //textstr = textstr + "\np1 " + Integer.toString(threePlayersTime.get(0)) + " p2 " + Integer.toString(threePlayersTime.get(1)) + " p3 "  + Integer.toString(threePlayersTime.get(2));
+        //text.setText(textstr);
         p1num = 0;
         p2num = 0;
         p3num = 0;
@@ -157,8 +157,6 @@ public class ThreePlayerBuzzerActivity extends Activity {
             threePlayersTime.add(p1num);
             threePlayersTime.add(p2num);
             threePlayersTime.add(p3num);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -175,10 +173,7 @@ public class ThreePlayerBuzzerActivity extends Activity {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        textstr = textstr + "\nFile Saved";
-        text.setText(textstr);
+        //textstr = textstr + "\nFile Saved";
+        //text.setText(textstr);
     }
-
-
-
 }
