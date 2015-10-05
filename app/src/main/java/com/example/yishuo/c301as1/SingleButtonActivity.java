@@ -28,10 +28,9 @@ public class SingleButtonActivity extends Activity {
 
     private long startTime;
     private long endTime;
-    private int timeSet;
     private float diff;
     public TextView text;
-    Timer timer;
+    private Timer timer;
 
     private FileReadWrite sfile;
 
@@ -40,7 +39,6 @@ public class SingleButtonActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singlebuttonactivity);
         status = 0;
-        timeSet = 0;
         text = (TextView) findViewById(R.id.textView);
         textstr = "Press \"React\" to start";
         sfile = new FileReadWrite();

@@ -21,8 +21,6 @@ public class ThreePlayerBuzzerActivity extends Activity {
     private int temp0;
     private int temp1;
     private int temp2;
-    private static final String FThreePlayers = "f3.sav";
-    private ArrayList<Integer> threePlayersTime;
 
     private FileReadWrite sfile;
 
