@@ -1,6 +1,5 @@
 package com.example.yishuo.c301as1;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -18,11 +17,6 @@ public class MainActivity extends ActionBarActivity {
         Button singleMode = (Button) findViewById(R.id.singleMode);
         Button buzzerMode = (Button) findViewById(R.id.buzzerMode);
         Button statisticsMode = (Button) findViewById(R.id.statisticsMode);
-        /*
-        singleMode.setOnClickListener(new singleButton());
-        buzzerMode.setOnClickListener(new buzzerButton());
-        statistics.setOnClickListener(new statisticsButton());
-        */
 
         singleMode.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
@@ -46,8 +40,6 @@ public class MainActivity extends ActionBarActivity {
             }
         });
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
