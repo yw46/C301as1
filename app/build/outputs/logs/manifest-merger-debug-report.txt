@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:2:1-29:12
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:2:1-28:12
 	xmlns:android
 		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -14,7 +14,7 @@ ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManife
 		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
 		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
 application
-ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:5:5-27:19
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:5:5-26:19
 MERGED from [com.android.support:appcompat-v7:22.2.1] /cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] /cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/AndroidManifest.xml:22:5-20
 	android:label
@@ -83,12 +83,6 @@ ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManife
 		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:25:52-75
 	android:name
 		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:25:19-51
-activity#com.example.yishuo.c301as1.FileReadWrite
-ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:26:9-84
-	android:label
-		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:26:49-72
-	android:name
-		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:26:19-48
 uses-sdk
 INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:22.2.1] /cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:20:5-43

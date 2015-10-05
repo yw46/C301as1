@@ -43,9 +43,6 @@
         <activity
             android:name="com.example.yishuo.c301as1.StatisticsButton"
             android:label="C301as1" />
-        <activity
-            android:name="com.example.yishuo.c301as1.FileReadWrite"
-            android:label="C301as1" />
     </application>
 
 </manifest>
