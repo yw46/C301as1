@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="345dp"
+        android:layout_height="100dp"
+        android:text="New Text"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.10" />
+
+    <Button
+        android:layout_width="345dp"
+        android:layout_height="425dp"
+        android:text="React"
+        android:id="@+id/reactButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.1"
+        android:clickable="true"
+        android:onClick="click" />
+
+</LinearLayout><!-- From: file:/cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/res/layout/activity_singlebuttonactivity.xml -->

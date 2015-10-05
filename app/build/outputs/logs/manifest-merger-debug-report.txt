@@ -1,0 +1,101 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:2:1-29:12
+	xmlns:android
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:2:11-69
+	package
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:3:5-41
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+application
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:5:5-27:19
+MERGED from [com.android.support:appcompat-v7:22.2.1] /cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.1] /cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:8:9-38
+	android:allowBackup
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:9:9-40
+activity#com.example.yishuo.c301as1.MainActivity
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:10:9-18:20
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:12:13-42
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:11:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.yishuo.c301as1.DisplayMessageActivity
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:19:9-93
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:19:58-81
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:19:19-57
+activity#com.example.yishuo.c301as1.SingleButtonActivity
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:20:9-91
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:20:56-79
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:20:19-55
+activity#com.example.yishuo.c301as1.BuzzerNumPlayer
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:21:9-86
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:21:51-74
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:21:19-50
+activity#com.example.yishuo.c301as1.TwoPlayerBuzzerActivity
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:22:9-94
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:22:59-82
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:22:19-58
+activity#com.example.yishuo.c301as1.ThreePlayerBuzzerActivity
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:23:9-96
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:23:61-84
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:23:19-60
+activity#com.example.yishuo.c301as1.FourPlayerBuzzerActivity
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:24:9-95
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:24:60-83
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:24:19-59
+activity#com.example.yishuo.c301as1.StatisticsButton
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:25:9-87
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:25:52-75
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:25:19-51
+activity#com.example.yishuo.c301as1.FileReadWrite
+ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:26:9-84
+	android:label
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:26:49-72
+	android:name
+		ADDED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml:26:19-48
+uses-sdk
+INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:22.2.1] /cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.1] /cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml
+		INJECTED from /cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/AndroidManifest.xml

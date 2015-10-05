@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yishuo.c301as1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="yishuo-reflex"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.yishuo.c301as1.MainActivity"
+            android:label="yishuo-reflex" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.yishuo.c301as1.DisplayMessageActivity"
+            android:label="C301as1" />
+        <activity
+            android:name="com.example.yishuo.c301as1.SingleButtonActivity"
+            android:label="C301as1" />
+        <activity
+            android:name="com.example.yishuo.c301as1.BuzzerNumPlayer"
+            android:label="C301as1" />
+        <activity
+            android:name="com.example.yishuo.c301as1.TwoPlayerBuzzerActivity"
+            android:label="C301as1" />
+        <activity
+            android:name="com.example.yishuo.c301as1.ThreePlayerBuzzerActivity"
+            android:label="C301as1" />
+        <activity
+            android:name="com.example.yishuo.c301as1.FourPlayerBuzzerActivity"
+            android:label="C301as1" />
+        <activity
+            android:name="com.example.yishuo.c301as1.StatisticsButton"
+            android:label="C301as1" />
+        <activity
+            android:name="com.example.yishuo.c301as1.FileReadWrite"
+            android:label="C301as1" />
+    </application>
+
+</manifest>

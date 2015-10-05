@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/buzzerNumText"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.39" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2 players"
+        android:id="@+id/twoPlayers"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.20" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3 players"
+        android:id="@+id/threePlayers"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.20" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4 players"
+        android:id="@+id/fourPlayers"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.20" />
+</LinearLayout><!-- From: file:/cshome/yishuo/Desktop/c301/C301as1-master/app/src/main/res/layout/activity_buzzernumplayer.xml -->

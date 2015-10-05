@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/usr/local/share/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-6b8f43d628bde674586e533393329d929d7ff825.jar" />
+    </item>
+    <item
+        jar="/cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/pre-dexed/debug/classes-c8dc8b71d89d594c9c3851f7edd95c9f0b76cdff.jar" />
+    </item>
+    <item
+        jar="/cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-db9dc09f8498790ebb31a250d0f75fc7fa78c8be.jar" />
+    </item>
+    <item
+        jar="/cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/pre-dexed/debug/classes-480682e7ef57e48fdff9ff42600a983a16a697af.jar" />
+    </item>
+    <item
+        jar="/cshome/yishuo/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/cshome/yishuo/Desktop/c301/C301as1-master/app/build/intermediates/pre-dexed/debug/gson-2.3.1-396c97e220c7823395e445d9832c33218841079f.jar" />
+    </item>
+
+</items>
